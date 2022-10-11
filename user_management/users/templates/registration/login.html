@@ -1,0 +1,17 @@
+<!-- users templates login.html-->
+<!--# https://www.youtube.com/watch?v=0M1z_-RSv3I-->
+
+{% extends 'base.html' %}
+{% block content %}
+
+<h2> Login </h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Login">
+</form>
+
+<a href="{% url 'dashboard' %}"> Back to dasbhoard</a>
+
+{% endblock %}
