@@ -1,0 +1,14 @@
+<!-- users templates users dashboard.html-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+Currently charging, {{ user.username|default:'Guest' }}!
+
+<form action="/stats" method="POST">
+            
+    <button id="stat-bnt" class="btn">Check for Stats.</button>
+
+</form>
+
+{% endblock %}

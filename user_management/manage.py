@@ -2,7 +2,14 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from flask import Flask
 
+app = Flask(__name__)
+@app.route("/")
+@app.route("/home")
+
+def home():
+    return dashboard
 
 def main():
     """Run administrative tasks."""
